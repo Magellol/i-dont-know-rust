@@ -3,10 +3,9 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 extern {
-    fn alert(s: &str);
 }
 
 #[wasm_bindgen]
-pub fn greet(name: &str) {
-    alert(&format!("Hello, {}!", name));
+pub fn sum(list: Vec<u32>) -> u32 {
+    list.iter().fold(0, |acc, val| acc + val)
 }

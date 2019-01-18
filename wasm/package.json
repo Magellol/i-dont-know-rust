@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predev": "npm run build:wasm",
+    "dev": "webpack-dev-server --watch",
     "build:wasm": "cargo build --target wasm32-unknown-unknown && wasm-bindgen target/wasm32-unknown-unknown/debug/lib_wasm.wasm --out-dir ./src/wasm-pkg"
   },
   "author": "",

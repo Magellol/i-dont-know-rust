@@ -1,2 +1,4 @@
 **/target/
+**/wasm-pkg/
+**/node_modules/
 **/*.rs.bk

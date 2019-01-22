@@ -1,4 +1,4 @@
-# I-dont-know-rust: WASM
+# i-dont-know-rust: WASM
 
 ### Usage
 

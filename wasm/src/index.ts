@@ -1,7 +1,8 @@
-const module = import('./wasm-pkg/lib_wasm');
+(async wasmModule => {
+  const rustModule = await wasmModule;
 
-module.then(rust => {
-  const r = rust.sum(new Uint32Array([1, 2]));
+  const input = [1, 2];
+  const result = rustModule.sum(new Uint32Array(input));
 
-  console.log('Result from rust sum', r);
-});
+  document.body.textContent = `Result of ${input.join(' + ')} is ${result}.`;
+})(import('./wasm-pkg/lib_wasm'));
